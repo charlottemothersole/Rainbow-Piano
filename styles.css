@@ -1,0 +1,88 @@
+#hero {
+    height:100vh;
+    background-image:url("./rainbow.jpg"); 
+    background-size:100vw 100vh;
+    background-repeat:no-repeat;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0;
+}
+
+h1,.key {
+    color:white;
+    font-family:'Mansalva', cursive;
+}
+
+h1 {
+    text-align: center;
+    font-size:2.75rem;
+}
+
+#piano {
+    height:80%;
+    width:100vw;
+    display:flex;
+    align-items: center;
+}
+
+#piano-banner {
+    width:100vw;
+    height:20vh;
+    display:flex;  
+    align-items: center;  
+    justify-content: space-around;    
+    background-color:rgba(0,0,0,.7);
+}
+
+.key {
+    height:100px;
+    width:100px;
+    border:1px solid white;
+    border-radius:50%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+    transition:0.8s;
+}
+
+kbd {
+    font-size: 2.5rem;
+}
+
+.colour {
+    margin:0;
+}
+
+.playing {    
+    transform:scale(1.5);
+}
+
+.red {
+    background-color:red;
+}
+
+.yellow {
+    background-color:yellow;
+}
+
+.pink {
+    background-color:pink;
+}
+
+.blue {
+    background-color:blue;
+}
+
+.orange {
+    background-color:orange;
+}
+
+.purple {
+    background-color:purple;
+}
+
+.green {
+    background-color:green;
+}

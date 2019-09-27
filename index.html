@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Rainbow Piano</title>
+        <link type="text/css" rel='stylesheet' href='./styles.css'> 
+        
+        <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+    </head>
+    <body id='hero'>
+        <header>
+            <h1>Welcome! Press any key to play the rainbow!</h1>
+        </header>
+        <div id ='piano'>
+            <div id='piano-banner'>
+            <div data-key='65' id = 'red' class='key'>
+                <kbd>A</kbd>
+                <p class='colour'>Red</p>
+            </div>
+            <div data-key='83' id = 'yellow' class='key'>
+                <kbd>S</kbd>
+                <p class='colour'>Yellow</p>
+            </div>
+            <div data-key='68' id='pink' class='key'>
+                <kbd>D</kbd>
+                <p class='colour'>Pink</p>
+            </div>
+            <div data-key='70' id='blue' class='key'>
+                <kbd>F</kbd>
+                <p class='colour'>Blue</p>
+            </div>
+            <div data-key='71' id='orange' class='key'>
+                <kbd>G</kbd>
+                <p class='colour'>Orange</p>
+            </div>
+            <div data-key='72' id='purple' class='key'>
+                <kbd>H</kbd>
+                <p class='colour'>Purple</p>
+            </div>
+            <div data-key='74' id='green' class='key'>
+                <kbd>J</kbd>
+                <p class='colour'>Green</p>
+            </div>
+        </div>
+        </div>
+        <audio data-key='65' src='./a.wav'></audio>
+        <audio data-key='83' src='./b.wav'></audio>
+        <audio data-key='68' src='./c.wav'></audio>
+        <audio data-key='70' src='./d.wav'></audio>
+        <audio data-key='71' src='./e.wav'></audio>
+        <audio data-key='72' src='./f.wav'></audio>
+        <audio data-key='74' src='./g.wav'></audio>
+<!-- 
+   <script>
+    
+    
+    //function to confirm if any html audio elements have a data-key matching the datakey of the letter pressed
+    function playSound(e) {
+        const audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
+        const key = document.querySelector(`.key[data-key='${e.keyCode}']`);
+        const red = document.getElementById('red');
+        const yellow = document.getElementById('yellow');
+        const pink = document.getElementById('pink');
+        const blue = document.getElementById('blue');
+        const orange = document.getElementById('orange');
+        const purple = document.getElementById('purple');
+        const green = document.getElementById('green');
+        if(!audio) return;//stop function running
+        audio.currentTime = 0; //resets the audio to beginning to allow for multiple note strikes when audio already playing
+        audio.play();
+        key.classList.add('playing');//adds the class 'playing' to the element to update the style
+        if(e.keyCode === 65) {
+            red.classList.add('red');
+        } else if(e.keyCode === 83) {
+            yellow.classList.add('yellow');
+        } else if (e.keyCode ===68) {
+            pink.classList.add('pink');
+        } else if (e.keyCode ===70) {
+            blue.classList.add('blue');
+        } else if (e.keyCode ===71) {
+            orange.classList.add('orange');
+        } else if (e.keyCode ===72) {
+            purple.classList.add('purple');
+        } else if (e.keyCode ===74) {
+            green.classList.add('green');
+        }
+    };
+
+    //function to remove class 'playing'
+    function removeTransition(e) {
+        if(e.propertyName !== 'transform') return; //filter to only select transform property, not all other styles
+        this.classList.remove('playing','red','yellow','pink','blue','orange','purple','green');//remove class 'playing' from the element
+    }
+
+    const keys = document.querySelectorAll('.key'); //to identify all elements with class 'key'
+    keys.forEach(key => key.addEventListener('transitionend',removeTransition));//to attach the event listener to each 'key' element and listen for transition end, then run removetransition function
+
+    window.addEventListener('keydown', playSound);//listening in browser for keyboard press
+    </script>-->
+   <script src='./script.js' type='text/javascript'></script>
+    </body>
+</html>
